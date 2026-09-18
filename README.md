@@ -1,3 +1,9 @@
+Usage:
+
+docker compose exec web bin/rails db:seed
+
+---------------
+
 # eigopencil.com 
 ![alt text](./app/assets/images/readme/image.png)
 # 概要
