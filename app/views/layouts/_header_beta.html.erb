@@ -1,15 +1,7 @@
 <!--Alpine.js を使用。-->
-<div class="relative flex justify-between items-center relative z-10">
-  <!-- ロゴ -->
-
-  <div class="logo-container h-16 w-16 p-4">
-  <%= link_to root_path, class: "logo-link" do %>
-    <%= image_tag("favicon-v2.ico", class: "logo max-h-[28px] object-contain") %>
-  <% end %>
-</div>
-
-  <!-- menubar -->
-  <div x-data="{ open: false }" class="top-0 right-0 z-10">
+<div class="relative flex items-center z-10">
+  <!-- menubar（ロゴの左側に配置） -->
+  <div x-data="{ open: false }" class="z-10">
   <!--
     <button @click="open = ! open" class="">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -74,7 +66,7 @@
     ☰
   </button>
 
-  <nav id="menu" class="hidden absolute top-full right-0 bg-white shadow-md w-64 max-w-xs overflow-hidden z-50">
+  <nav id="menu" class="hidden absolute top-full left-0 bg-white shadow-md w-64 max-w-xs overflow-hidden z-50">
   <p>
     <%= link_to "🤝 mottodekiruメンバー", root_path,
       class: "block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg font-semibold" %>
@@ -132,6 +124,13 @@
 
 
   </div>
+
+  <!-- ロゴ -->
+  <div class="logo-container h-16 w-16 p-4">
+  <%= link_to root_path, class: "logo-link" do %>
+    <%= image_tag("favicon-v2.ico", class: "logo max-h-[28px] object-contain") %>
+  <% end %>
+</div>
 </div>
 
 

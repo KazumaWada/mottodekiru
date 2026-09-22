@@ -1,15 +1,19 @@
 <div class="flex h-screen overflow-hidden">
 
   <!-- 👈左カラム（固定・sm以上で表示） -->
+<%# 左カラムは一時的に無効化中(if falseで丸ごと非表示) %>
+<% if false %>
   <div class="hidden sm:block sm:w-[150px] fixed h-full">
     <%= render 'users/user_actions' %>
   </div>
+<% end %>
   <!-- 👈左カラム（固定・sm以上で表示） -->
 
   <!-- 👉右カラム（スマホでは余白なし） -->
   <div class="w-full sm:ml-[150px] overflow-y-auto">
   <p class="pl-4 font-bold text-lg hidden sm:block">#<%= params[:tags] %></p>
-  <%= render partial: 'microposts/content_navs_phone' %>
+  <%= render partial: 'microposts/tags' %>
+  <%# render partial: 'microposts/content_navs_phone' %>
   <!----タグの結果----->
 <!-- where: tagの要素の中でも、params[:tags]に当てはまる内容を取得してくる。-->
 <!--    get '/posts/:tags',←この":tags"からparamsが探している to: 'microposts#tags', as: 'tag'-->
