@@ -1,5 +1,6 @@
 <div class="flex">
 
+<%# 左カラムは一時的に無効化中(if falseで丸ごと非表示) %>
 <% if false %>
   <!-- 左カラム（固定・sm以上で表示） -->
   <div class="hidden sm:block sm:w-[150px] fixed h-full">
@@ -15,15 +16,13 @@
         <%# <%= render partial: 'users/profile' %>
         <%= render 'users/user_actions' %>
         <%= render partial: 'microposts/tags' %>
-        <%= render partial: 'microposts/content_navs_phone' %>
+        <%#<%= render partial: 'microposts/content_navs_phone' %>
       <% end %>
       <%= render partial: 'microposts/micropost' %>
     <% end %>
   </div>
 
 </div>
-
-<%= render 'layouts/bottom_btns' %> 
 
 
 
