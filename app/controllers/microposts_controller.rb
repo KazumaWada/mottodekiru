@@ -122,9 +122,6 @@ class MicropostsController < ApplicationController
 
       if @micropost.save
        flash[:success] = "新しいカードを登録しました。"
-      
-       #ファイルにも記録しておく。
-       write_to_file(@micropost.content);
        redirect_to user_path(@user)
       else
        flash[:danger] = "⚠️heads up! English only!!⚠️"
@@ -217,22 +214,6 @@ class MicropostsController < ApplicationController
     def micropost_params
       params.require(:micropost).permit(:content, :answer, :correct_num, :id, :tags, :original, :reference_link, :reference_link_comment)
       #{"authenticity_token"=>"[FILTERED]", "content"=>"hh", "commit"=>"Post", "slug"=>"a"}
-    end
-
-  
-    def write_to_file(content)
-      file_name = "content_db.txt"
-      file_path = Rails.root.join('public', file_name)
-
-     begin
-      #aは、ファイルを開くという意味
-      File.open(file_path, 'a') do |file|
-        file.puts "#{Time.now}: #{content}"
-     end
-     rescue => e 
-      Rails.logger.error "Failed to write to file: #{e.message}"
-     end
-
     end
 
 
