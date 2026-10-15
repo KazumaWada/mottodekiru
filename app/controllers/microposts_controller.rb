@@ -156,8 +156,7 @@ class MicropostsController < ApplicationController
       @micropost.save#DBに反映
       flash[:success] = "カードの内容を更新しました"
       # これだとuser_nameが変わるから、エラーになる。最新のものを取得するか、rootにリダイレクトする。
-      # redirect_to user_path(@user)
-      redirect_to root 
+      redirect_to user_path(@user)
     end
 
     def destroy
