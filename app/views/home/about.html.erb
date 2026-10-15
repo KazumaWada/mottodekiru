@@ -37,7 +37,7 @@
 
   <nav class="top-0 grid grid-cols-12 fixed w-full bg-white p-4">
   <div class="col-span-6 text-left">
-    <%= image_tag "logo08.png", class: "text-blue-600 max-h-[28px] object-contain inline-block" %>
+    <%= image_tag "logo/icon_72px_white", class: "max-h-[40px] object-contain inline-block" %>
   </div> 
 
   <div class="col-span-6 text-right">
@@ -121,35 +121,57 @@
 </section>-->
 
 
-<section id="title" class="bg-gray-50 grid grid-cols-12 gap-3 p-4 sm:p-10 mt-12">
- 
+<section class="bg-gray-50 grid grid-cols-12 gap-3 p-4 sm:p-10 mt-12">
+
       <div class="sm:col-span-6 col-span-12 sm:text-3xl text-2xl">
-        <p class="text-blue-600 font-bold">🔦 フラッシュカード</p>
-        <p class="text-gray-900 text-base sm:text-lg sm:font-semibold sm:p-6">左上の「Tap me！」ボタンをタップするだけで、登録した単語のフラッシュカードが表示されます。</p>
+        <p class="text-blue-600 font-bold">🏷️ タグで整理</p>
+        <p class="text-gray-900 text-base sm:text-lg sm:font-semibold sm:p-6">単語やフレーズにタグを付けて、場面やテーマごとにまとめられます。タグをタップすれば、そのタグのカードだけを絞り込んで見返せます。</p>
       </div>
 
       <div class="sm:col-span-6 col-span-12">
-        <%= image_tag "tapme.gif", alt: "サンプルGIF", class: "w-full" %>
+        <%= image_tag "lp-tags.png", alt: "タグで整理", class: "w-full" %>
       </div>
-
 
 </section>
 
-<section id="title" class="bg-gray-50 grid grid-cols-12 gap-3  p-4 sm:p-10">     
+<section class="bg-gray-50 grid grid-cols-12 gap-3 p-4 sm:p-10">
 
-     <div class="sm:col-span-6 col-span-12 sm:text-3xl text-2xl">
+      <div class="sm:col-span-6 col-span-12 sm:text-3xl text-2xl">
+        <p class="text-blue-600 font-bold">🔦 フラッシュカード</p>
+        <p class="text-gray-900 text-base sm:text-lg sm:font-semibold sm:p-6">画面上部のカードのアイコンをタップするだけで、登録した単語のフラッシュカードが表示されます。</p>
+      </div>
+
+      <div class="sm:col-span-6 col-span-12">
+        <%= image_tag "tapme.gif", alt: "フラッシュカード", class: "w-full" %>
+      </div>
+
+</section>
+
+<section class="bg-gray-50 grid grid-cols-12 gap-3 p-4 sm:p-10">
+
+      <div class="sm:col-span-6 col-span-12 sm:text-3xl text-2xl">
+        <p class="text-blue-600 font-bold">📎 関連リンクを貼れる</p>
+        <p class="text-gray-900 text-base sm:text-lg sm:font-semibold sm:p-6">登録したフレーズに、その言葉が出てきたYouTubeや記事のリンクを貼れます。見返したときに、どんな場面で使われていたかをすぐに確かめられます。</p>
+      </div>
+
+      <div class="sm:col-span-6 col-span-12">
+        <%= image_tag "lp-link.png", alt: "関連リンク", class: "w-full" %>
+      </div>
+
+</section>
+
+<section class="bg-gray-50 grid grid-cols-12 gap-3 p-4 sm:p-10">
+
+      <div class="sm:col-span-6 col-span-12 sm:text-3xl text-2xl">
         <p class="text-blue-600 font-bold">🔗 クリップ集</p>
-        <p class="text-gray-900 text-base sm:text-lg sm:font-semibold sm:p-6">
-        英単語やフレーズを登録するときに、その言葉が使われていたYouTubeやSNSのリンクも一緒に保存できます。
-        <br><br>見返した時にその英語のニュアンスをすぐに思い出せたり、他のユーザーと「こんな英語コンテンツがあったよ！」を共有することで、リアルな英語を学ぶ体験が広がります。
-        </p>
-     </div>
-
-     <div class="sm:col-span-6 col-span-12">
-        <%= image_tag "clips-lp.png", class: "" %>
+        <p class="text-gray-900 text-base sm:text-lg sm:font-semibold sm:p-6">みんなが貼ったリンクは、クリップ集に匿名で集まります。<br><br>他のユーザーと「こんな英語コンテンツがあったよ！」を共有することで、リアルな英語を学ぶ体験が広がります。</p>
       </div>
-</section>
 
+      <div class="sm:col-span-6 col-span-12">
+        <%= image_tag "clips-lp.png", alt: "クリップ集", class: "w-full" %>
+      </div>
+
+</section>
 
 
 <section class="p-5">
@@ -193,33 +215,19 @@
   </div>
 </section>
 
-<!-- スポンサー -->
-<section id="sponsors" class="p-5 mt-12 bg-blue-50">
-  <div id="container" class="text-center">
+<!-- はじめる(CTA) -->
+<section id="cta" class="px-5 py-16 sm:py-20 mt-12 bg-blue-50">
+  <div class="max-w-2xl mx-auto text-center">
 
-    <h1 class="text-xl sm:text-xl font-bold text-gray-900 mb-8">
-      <span class="text-gray-900"> 🤝 応援ありがとうございます！</span>
-      <p class="font-semibold text-gray-500"></p>
-    </h1>
+    <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 leading-snug">
+      英語を、<span class="text-blue-600">もっとできる</span>に。
+    </h2>
 
-   <div class="flex flex-wrap justify-center items-center gap-8 mt-8 mb-6">
-      <p>ひでたか</p>
-      <p>笹野</p>
-      <p>鈴木まー</p>
-      <p>EMK</p>
-    </div>
-
-
-    <!--<p class="text-gray-600 text-sm mt-4 max-w-xl mx-auto">-->
-    <p class="text-gray-600 text-sm mt-4 mb-2">
-    mottodekiruを1人で開発・運営している事情もあり、継続的なサービス維持のためにOFUSEを利用した支援ページを開設させていただきました。<br>
-    支援してくださった方々には、お名前（と、ご希望であればリンク）を掲載させていただきます。
-    </p>
-
-    <div class="mt-4 inline-block p-4">
-      <a href="https://ofuse.me/kazuma" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-bold text-sm sm:text-base">
-        mottodekiruを応援する！
-      </a>
+    <div class="mt-8">
+      <%= link_to login_path, data: { turbo: false }, class: "group inline-flex items-center gap-2 bg-blue-600 text-white font-bold text-base sm:text-lg px-10 py-4 rounded-lg shadow-lg shadow-blue-600/30 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-xl transition" do %>
+        はじめる
+        <span class="transition-transform group-hover:translate-x-1">→</span>
+      <% end %>
     </div>
 
   </div>

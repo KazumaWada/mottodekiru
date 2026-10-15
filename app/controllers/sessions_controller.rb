@@ -43,7 +43,7 @@ class SessionsController < ApplicationController
     initial_card.save
     end    
     
-    flash[:success] = "ようこそ🎉! #{user.name}さん! さっそく「💳 単語登録」から覚えたい英語を登録してみよう！"
+    # flash[:success] = "ようこそ🎉! #{user.name}さん! さっそく「💳 単語登録」から覚えたい英語を登録してみよう！"
     
     redirect_to root_path
     
