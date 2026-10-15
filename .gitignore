@@ -47,3 +47,6 @@ yarn-debug.log*
 
 # Personal notes / plans (not shared/committed)
 /notes/
+
+# macOS
+.DS_Store
